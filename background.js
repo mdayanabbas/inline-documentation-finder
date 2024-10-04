@@ -38,6 +38,8 @@ class DocumentationService {
       .map(([source, config]) => this.fetchFromSource(word, source, config));
 
     const results = await Promise.all(fetchPromises);
+    
+    // Return the first successful result or null if all fail
     return results.find(result => result !== null) || null;
   }
 
@@ -49,7 +51,7 @@ class DocumentationService {
       return config.parseResponse(data, word);
     } catch (error) {
       console.error(`Error fetching from ${source}:`, error);
-      return null;
+      return null; // Return null on error to allow other sources to be checked
     }
   }
 
