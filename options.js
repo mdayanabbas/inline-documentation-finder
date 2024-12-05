@@ -1,5 +1,5 @@
 const openInNewTabCheckbox = document.getElementById('open-in-new-tab');
- const disableFetchingForDomainsCheckbox = document.getElementById('disable-fetching-for-domains');
+const disableFetchingForDomainsCheckbox = document.getElementById('disable-fetching-for-domains');
 const saveButton = document.getElementById('save-btn');
 const statusParagraph = document.getElementById('status');
 
