@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('darkMode').checked = settings.darkMode;
   });
 
-  // Save settings
+  // Now just save the settings.
   document.getElementById('saveSettings').addEventListener('click', () => {
     const settings = {
       enabled: document.getElementById('enableExtension').checked,
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // Show save confirmation
       const button = document.getElementById('saveSettings');
       const originalText = button.textContent;
       button.textContent = 'Saved!';
