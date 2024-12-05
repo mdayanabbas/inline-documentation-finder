@@ -1,6 +1,7 @@
 # Inline Documentation Finder
 
 ![Inline Documentation Finder Logo](logo.png)
+![](icon16.jpg)
 
 **Inline Documentation Finder** is a Chrome extension that enhances your coding experience by providing instant, inline documentation tooltips. Whether you're working on GitHub, LeetCode, or other coding platforms, this extension fetches relevant documentation from sources like MDN Web Docs, Python Documentation, and Node.js Documentation directly within your browser.
 
