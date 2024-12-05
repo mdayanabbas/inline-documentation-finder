@@ -1,13 +1,12 @@
 # Inline Documentation Finder
 
-![Inline Documentation Finder Logo](icon16.jpg)
+![Inline Documentation Finder Logo](icon16.png)
 
-**Inline Documentation Finder** is a Chrome extension that enhances your coding experience by providing instant, inline documentation tooltips. Whether you're working on GitHub, LeetCode, or other coding platforms, this extension fetches relevant documentation from sources like MDN Web Docs, Python Documentation, and Node.js Documentation directly within your browser.
+**Inline Documentation Finder** is a powerful Chrome extension designed to enhance your coding experience by providing instant, inline documentation tooltips. Whether you're working on GitHub, LeetCode, or other coding platforms, this extension fetches relevant documentation from sources like MDN Web Docs, Python Documentation, and Node.js Documentation, directly within your browser.
 
 ## 📖 Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Configuration](#configuration)
@@ -18,25 +17,21 @@
 
 ## 🚀 Features
 
-- **Real-Time Documentation**: Hover over code elements to instantly view relevant documentation without leaving the page.
+- **Real-Time Documentation**: Hover over code elements to instantly view relevant documentation without leaving your current page.
 - **Multiple Sources**: Fetches documentation from MDN Web Docs, Python Documentation, and Node.js Documentation.
 - **Customizable Settings**:
-  - **Enable/Disable Extension**: Easily toggle the extension's functionality.
+  - **Enable/Disable Extension**: Toggle the extension's functionality on or off.
   - **Select Documentation Sources**: Choose which documentation sources to include.
   - **Tooltip Delay**: Adjust the delay before the tooltip appears.
   - **Dark Mode**: Switch between light and dark themes for tooltips.
-- **Cross-Platform Support**: Works seamlessly across platforms like GitHub and LeetCode.
-- **Caching Mechanism**: Stores fetched documentation to minimize redundant API calls and boost performance.
-
-## 🎥 Demo
-
-![Demo GIF](images/demo.gif)
+- **Responsive Design**: Works seamlessly across various coding platforms like GitHub and LeetCode.
+- **Caching Mechanism**: Stores fetched documentation to reduce redundant API calls and enhance performance.
 
 ## 🛠 Installation
 
 ### Prerequisites
 
-- **Google Chrome**: Ensure the latest version of Chrome is installed.
+- **Google Chrome**: Ensure you have the latest version of Chrome installed.
 
 ### Steps
 
@@ -44,6 +39,7 @@
    
    ```bash
    git clone https://github.com/Farru049/inline-documentation-finder.git
+
 Navigate to the Project Directory:
 
 bash
@@ -64,17 +60,29 @@ Click on Load unpacked and select the project directory (inline-documentation-fi
 Verify Installation:
 
 The Inline Documentation Finder extension should now appear in your list of installed extensions.
-Access the extension's settings by clicking on its icon next to the address bar.
+You can access the extension's settings by clicking on the extension icon next to the address bar.
+Test the Extension:
+
+Open a new tab and navigate to GitHub, LeetCode, or any supported coding platform.
+Hover over a code element like a function, variable, or keyword.
+You should see a tooltip appear with relevant documentation fetched from the selected sources.
+Customize Your Experience:
+
+Click on the Inline Documentation Finder icon in the Chrome toolbar to access the popup.
+Configure the settings to adjust which documentation sources are used, enable dark mode, and set the tooltip delay.
+Enjoy Real-Time Documentation:
+
+The extension now works inline as you browse coding platforms, offering you helpful documentation directly in the browser.
 📝 Usage
 Activate the Extension:
 
 Ensure the extension is enabled in chrome://extensions/.
 Configure Settings:
 
-Click the Inline Documentation Finder extension icon to open the popup.
-Adjust the settings according to your preference:
+Click on the Inline Documentation Finder extension icon to open the popup.
+Adjust the settings as per your preference:
 Enable Extension: Toggle the extension on or off.
-Documentation Sources: Choose which sources to include (MDN, Python, Node.js).
+Documentation Sources: Select which sources to include (MDN, Python, Node.js).
 Tooltip Delay: Set the delay (in milliseconds) before the tooltip appears.
 Dark Mode: Switch between light and dark themes.
 Using Inline Documentation:
@@ -153,4 +161,3 @@ This project is licensed under the MIT License.
 
 🙌 Acknowledgements
 MDN Web Docs, Python.org, and Node.js for providing comprehensive documentation APIs.
-Chrome Developers for extensive documentation on building Chrome extensions.
