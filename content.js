@@ -45,6 +45,18 @@ class DocumentationFinder {
     this.tooltip.style.display = 'none';
     document.body.appendChild(this.tooltip);
     this.updateTooltipTheme();
+
+    // Add hover events to keep tooltip visible
+    this.tooltip.addEventListener('mouseenter', () => {
+      clearTimeout(this.hoverTimeout);
+    });
+
+    this.tooltip.addEventListener('mouseleave', (event) => {
+      const relatedTarget = event.relatedTarget;
+      if (!relatedTarget || !this.tooltip.contains(relatedTarget)) {
+        this.hideTooltip();
+      }
+    });
   }
 
   updateTooltipTheme() {
@@ -77,10 +89,22 @@ class DocumentationFinder {
 
   handleMouseOut(event) {
     const relatedTarget = event.relatedTarget;
-    if (!relatedTarget || !this.tooltip.contains(relatedTarget)) {
+    if (!relatedTarget || (!this.tooltip.contains(relatedTarget) && !this.isDescendantOfCode(relatedTarget))) {
       clearTimeout(this.hoverTimeout);
-      this.hideTooltip();
+      this.hoverTimeout = setTimeout(() => {
+        this.hideTooltip();
+      }, 200); // Small delay to prevent accidental hiding
     }
+  }
+
+  isDescendantOfCode(element) {
+    while (element) {
+      if (element.matches('code, pre *, .token, .identifier')) {
+        return true;
+      }
+      element = element.parentElement;
+    }
+    return false;
   }
 
   hideTooltip() {
@@ -128,7 +152,7 @@ class DocumentationFinder {
       <h3>${this.currentWord}</h3>
       ${syntax ? `<code>${syntax}</code>` : ''}
       <p>${description}</p>
-      <div class="source">Source: ${source} - <a href="${url}" target="_blank">Read more</a></div>
+      <div class="source">Source: ${source} - <a href="${url}" target="_blank" id="doc-link">Read more</a></div>
     `;
 
     // Position tooltip
@@ -150,6 +174,14 @@ class DocumentationFinder {
     this.tooltip.style.left = `${left}px`;
     this.tooltip.style.top = `${top}px`;
     this.tooltip.style.display = 'block';
+
+    // Add event listener to documentation link
+    const docLink = this.tooltip.querySelector('#doc-link');
+    if (docLink) {
+      docLink.addEventListener('click', (event) => {
+        event.stopPropagation(); // Prevent tooltip from disappearing
+      });
+    }
   }
 }
 
