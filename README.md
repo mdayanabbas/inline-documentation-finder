@@ -32,7 +32,9 @@
 ### Prerequisites
 
 - **Google Chrome**: Ensure you have the latest version of Chrome installed.
+# Navigate to the Project Directory:
 
+<<<<<<< HEAD
 ### Steps
 
 1. **Clone the Repository**:
@@ -94,45 +96,34 @@ bash
 Copy code
 cd inline-documentation-finder
 Install Dependencies (If applicable, e.g., if you're using npm for package management):
+=======
+cd inline-documentation-finder
 
-bash
-Copy code
+# Install Dependencies (if applicable, e.g., if you're using npm for package management):
+>>>>>>> db7e5a592d5f254e1ce8343c470c86fb7d1a8072
+
 npm install
-Load the Extension in Chrome:
 
-Open Chrome and navigate to chrome://extensions/.
-Enable Developer mode by toggling the switch in the top right corner.
-Click on Load unpacked and select the project directory (inline-documentation-finder).
-Verify Installation:
+# Load the Extension in Chrome:
 
-The Inline Documentation Finder extension should now appear in your list of installed extensions.
-You can access the extension's settings by clicking on the extension icon next to the address bar.
-Test the Extension:
+# 1. Open Chrome and navigate to chrome://extensions/.
+# 2. Enable Developer mode by toggling the switch in the top right corner.
+# 3. Click on 'Load unpacked' and select the project directory (inline-documentation-finder).
 
-Open a new tab and navigate to GitHub, LeetCode, or any supported coding platform.
-Hover over a code element like a function, variable, or keyword.
-You should see a tooltip appear with relevant documentation fetched from the selected sources.
-Customize Your Experience:
+# Verify Installation:
 
-Click on the Inline Documentation Finder icon in the Chrome toolbar to access the popup.
-Configure the settings to adjust which documentation sources are used, enable dark mode, and set the tooltip delay.
-Enjoy Real-Time Documentation:
+# The Inline Documentation Finder extension should now appear in your list of installed extensions.
+# You can access the extension's settings by clicking on the extension icon next to the address bar.
 
-The extension now works inline as you browse coding platforms, offering you helpful documentation directly in the browser.
-📝 Usage
-Activate the Extension:
+# Test the Extension:
 
-Ensure the extension is enabled in chrome://extensions/.
-Configure Settings:
+# Open a new tab and navigate to GitHub, LeetCode, or any supported coding platform.
+# Hover over a code element like a function, variable, or keyword.
+# You should see a tooltip appear with relevant documentation fetched from the selected sources.
 
-Click on the Inline Documentation Finder extension icon to open the popup.
-Adjust the settings as per your preference:
-Enable Extension: Toggle the extension on or off.
-Documentation Sources: Select which sources to include (MDN, Python, Node.js).
-Tooltip Delay: Set the delay (in milliseconds) before the tooltip appears.
-Dark Mode: Switch between light and dark themes.
-Using Inline Documentation:
+# Customize Your Experience:
 
+<<<<<<< HEAD
 Navigate to a coding platform like GitHub or LeetCode.
 Hover over any code element (e.g., functions, variables) to view the documentation tooltip.
 Click on Read more to open the full documentation in a new tab.
@@ -153,3 +144,4 @@ inline-documentation-finder/
 │   └── demo.gif            # Demo GIF showcasing extension features
 ├── manifest.json           # Chrome extension manifest file
 └── README.md               # Project documentation
+
